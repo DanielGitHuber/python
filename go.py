@@ -1,12 +1,10 @@
-#first
+﻿#first
 print('hello')
-
 
 
 #变量val
 val='hello'
 print(val)
-
 
 
 #数据data
@@ -31,7 +29,6 @@ e=2**3
 f=0.2+0.3
 message='happy '+str(a)+'th birthday'#避免类型错误
 print(a,b,c,d,e,f,'\t',message)
-
 
 
 #列表list
@@ -61,8 +58,6 @@ print(foundation)
 print(len(foundation[0]))##获取长度
 ##！注意避免索引错误，可以打印列表或其长度进行检查
 
-
-
 #操作列表
 ##遍历
 for name in foundation:
@@ -84,7 +79,6 @@ print(squares[0:3],squares[:2],squares[2:],squares[-1:],squares[:])
 #元组(不可变的列表）
 length=(200,50,60,80)
 print(length[0:3])
-
 
 
 #if语句（条件测试）
@@ -118,7 +112,6 @@ if length:
 else:
     print('length is empty')
 ##使用多个列表—>遍历再判断条件
-
 
 
 #字典dictionary(键值对)
@@ -166,7 +159,6 @@ dicts = {
     }
 print('\n\n',dicts)
 
-
 '''
 #输入与while循环
 ##input函数
@@ -190,7 +182,6 @@ while True:   ##条件成立时持续循环，除非有退出语句
 ##处理列表与字典
 ##在列表之间移动元素&删除包含特定值的列表元素
 ##使用用户输入填充字典
-
 
 
 #函数def
@@ -241,7 +232,6 @@ hello('algogogo')
 ##可导入类class（单个或多个或整个，以及模块中导入模块）
 
 
-
 #类class
 ##实例化：基于类来创建对象
 ##类中的函数称为方法
@@ -282,11 +272,20 @@ class Superme(Person):
 Cwy = Superme(170,25)       ##子类实例
 Cwy.p_h()
 print(Cwy.weight)       ##默认值也继承
-print('Person的实例：',Cwy.me)
+print('Person的实例的年龄：',Cwy.me.age)
+##注意重写父类中不适用的方法
 
 
+#文件
+with open('test.txt') as test:
+    print(test.read())  ##???
 
-
+with open('E:\学习\python\基础练习\\7.文件和数据格式化\cwy_copy.txt',encoding='UTF-8') as cc:
+    print(cc.readline())
+    lines = cc.readlines()
+    print(lines)
+for line in lines:
+    print(line.rstrip())
 
 
 
