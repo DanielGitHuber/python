@@ -277,19 +277,44 @@ print('Person的实例的年龄：',Cwy.me.age)
 
 
 #文件
-with open('test.txt') as test:
-    print(test.read())  ##???
-
+# ##???数字逐行读取出错
+with open('test.txt','w') as test:  ##r读 w写 a附加 r+读写
+    test.write('i love python!\n')
+    test.write('i love programming.\n')
+with open('test.txt','a') as test:
+    test.write('i also love creating apps that can run in a browser.')
 with open('E:\学习\python\基础练习\\7.文件和数据格式化\cwy_copy.txt',encoding='UTF-8') as cc:
-    print(cc.readline())
     lines = cc.readlines()
     print(lines)
 for line in lines:
     print(line.rstrip())
 
 
+##异常处理
+try:
+    print(5/0)
+except:
+    print('ZeroDivisionError!')
 
+def count_words(filename):
+    try:
+        with open(filename) as f_n:
+            contents = f_n.read()
+    except:
+        print('FileNotFoundError!')  ##什么都不做pass
+    else:
+        words = contents.split()
+        print('The file has about ' + str(len(words)) + 'words.')
+count_words('test.txt')
 
+import json
+numbers = [1, 2, 3, 4, 5, 6]
+filename = 'numbers.json'
+with open(filename, 'w') as n:
+    json.dump(numbers, n)
+with open(filename) as numbers:
+    nums = json.load(numbers)
+print(nums)
 
 
 

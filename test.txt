@@ -1,5 +1,3 @@
-3.1415926535
-
-  8979323846
-
-  2643383279
+i love python!
+i love programming.
+i also love creating apps that can run in a browser.
