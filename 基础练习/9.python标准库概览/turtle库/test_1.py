@@ -1,0 +1,82 @@
+from turtle import *
+
+speed(10)
+# 文字
+penup()
+goto(-180, 50)
+pendown()
+write('Cool colorful shapes', font=('Times', 30, 'bold'))
+# 三角形
+pensize(3)
+penup()
+goto(-200, -50)
+pendown()
+begin_fill()
+color('red')
+circle(40, steps=3)
+end_fill()
+# 四边形
+penup()
+goto(-100, -50)
+pendown()
+begin_fill()
+color('blue')
+circle(40, steps=4)
+end_fill()
+# 五边形
+penup()
+goto(0, -50)
+pendown()
+begin_fill()
+color('yellow')
+circle(40, steps=5)
+end_fill()
+# 六边形
+penup()
+goto(100, -50)
+pendown()
+begin_fill()
+color('blue')
+circle(40, steps=6)
+end_fill()
+# 圆形
+penup()
+goto(200, -50)
+pendown()
+begin_fill()
+color('purple')
+circle(40)
+end_fill()
+# 五环
+for i in range(5):
+    if i == 0:
+        pencolor('green')
+        penup()
+        goto(-100, -200)
+        pendown()
+        circle(40)
+    elif i == 1:
+        pencolor('yellow')
+        penup()
+        goto(-30, -200)
+        pendown()
+        circle(40)
+    elif i == 2:
+        pencolor('black')
+        penup()
+        goto(40, -200)
+        pendown()
+        circle(40)
+    elif i == 3:
+        pencolor('purple')
+        penup()
+        goto(-65, -150)
+        pendown()
+        circle(40)
+    else:
+        pencolor('blue')
+        penup()
+        goto(5, -150)
+        pendown()
+        circle(40)
+done()

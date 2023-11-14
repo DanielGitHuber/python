@@ -284,14 +284,9 @@ Cwy.p_h()
 print(Cwy.weight)       ##默认值也继承
 print('Person的实例：',Cwy.me)
 
-import calendar
-c = calendar.TextCalendar(calendar.MONDAY)
-c.prmonth(2023,10)
-print(c.formatyear(2023,1,0,1,4))
 
-print('q')
-print('w')
-print('z')
+
+
 
 
 
