@@ -317,6 +317,17 @@ with open(filename) as numbers:
 print(nums)
 
 
+##代码测试
+import unittest
+def get_name(first, last):
+    full_name = first + ' ' + last
+    return full_name.title()
+class NameTest(unittest.TestCase):
+    def test_name(self):
+        formatted_name = get_name('janis', 'joplin')
+        self.assertEqual(formatted_name, 'Janis Joplin')  ##断言方法的一种
+unittest.main()
+
 
 
 
