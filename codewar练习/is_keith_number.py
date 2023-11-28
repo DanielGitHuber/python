@@ -1,3 +1,6 @@
+from collections import deque
+
+
 def is_keith_number(n):
     if n < 10:
         return False
@@ -20,10 +23,7 @@ def is_keith_number(n):
             count += 1
 
 
-##chatgpt优化
-from collections import deque
-
-
+# chatgpt优化
 def is_keith_number_optimized(n):
     if n < 10:
         return False
@@ -36,5 +36,3 @@ def is_keith_number_optimized(n):
         current_sum = sum(digits)  # Recalculate the sum
         c += 1
     return c
-
-
